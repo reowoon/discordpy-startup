@@ -1,8 +1,10 @@
 from discord.ext import commands
 import os
 import traceback
+from egg import ANDROMEDA_EGG
 
-bot = commands.Bot(command_prefix='/')
+loop = asyncio.get_event_loop()
+client = ANDROMEDA_EGG(loop=loop)
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
