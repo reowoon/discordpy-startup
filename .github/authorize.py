@@ -25,9 +25,9 @@ class Authorize(commands.Cog):
         return self.bot.get_guild(ANDROMEDA_ID).get_member(_id)
 
     @property
-    def default_roles(self):
+    def piece_roles(self):
         guild = self.bot.get_guild(ANDROMEDA_ID)
-        return [guild.get_role(i) for i in default_roles_id]rgrgrgrgrgggrr
+        return [guild.get_role(i) for i in piece_roles_id]
 
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload: discord.RawReactionActionEvent):
@@ -38,9 +38,9 @@ class Authorize(commands.Cog):
         ):
             return
         member = self.get_member(payload.user_id)
-        if self.default_roles[0] in member.roles:
+        if self.piece_roles[0] in member.roles:
             return
-        await member.add_roles(*self.default_roles)
+        await member.add_roles(*self.piece_roles)
         name = member.display_name
         des1 = format(name, member.guild.me.display_name)
         embed = discord.Embed(
@@ -55,4 +55,4 @@ class Authorize(commands.Cog):
         )
         embed.set_thumbnail(url=member.avatar_url)
 
-        await self.bot.get_channel(main_channel).send(embed=embed)
+        await self.bot.get_channel(piece_channel).send(embed=embed)
