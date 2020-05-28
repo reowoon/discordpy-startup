@@ -3,7 +3,7 @@ from discord.ext import commands
 import cogs
 
 
-class SKYLINE(commands.Bot):
+class ANDROMEDA_EGG(commands.Bot):
 
     def __init__(self, **options):
         super().__init__('egg!', **options)
