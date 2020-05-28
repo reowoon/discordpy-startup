@@ -17,6 +17,6 @@ piece_channel = 585739143229734913
 chaos_roles_id = 712598474574528573
 piece_role_id = 712598559224102922
 # 認証のため、リアクションをつけるメッセージ（とチャンネル）
-chaos_authorize_message = 715445894912409700
-piece_authorize_message = 715445319365558303
-authorize_message_channel = 515467524960157716
+chaos_authorize_message = 713278562983215104
+piece_authorize_message = 712638362896564305
+authorize_message_channel = 712608688543891507
