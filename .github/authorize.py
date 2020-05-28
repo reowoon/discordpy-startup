@@ -40,7 +40,6 @@ class Authorize(commands.Cog):
         member = self.get_member(payload.user_id)
         if self.piece_roles[0] in member.roles:
             return
-        await member.add_roles(*self.piece_roles)
         name = member.display_name
         des1 = format(name, member.guild.me.display_name)
         embed = discord.Embed(
