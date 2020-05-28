@@ -1,7 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
-from egg import ANDROMEDA_EGG
+from romeda_egg import ANDROMEDA_EGG
 
 loop = asyncio.get_event_loop()
 client = ANDROMEDA_EGG(loop=loop)
