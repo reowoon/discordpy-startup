@@ -37,6 +37,7 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 # 自己紹介テンプレート固定
+global introduction_channels
 
 @client.event
 async def on_message(message):
