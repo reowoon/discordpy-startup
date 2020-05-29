@@ -27,6 +27,8 @@ piece_role_id = 712598559224102922
 chaos_authorize_message = 713278562983215104
 piece_authorize_message = 712638362896564305
 authorize_message_channel = 712608688543891507
+# 自己紹介チャンネル
+introduction_channels = [559228832968736809,713312999577747527,713314722274869279]
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -34,7 +36,12 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
+# 自己紹介テンプレート固定
+embed = discord.Embed(title='自己紹介テンプレート', description='【名前】\n【年齢】\n【趣味】\n【一言】', color=0x64ffff)
 
-
+@client.event
+async def on_message(message):
+    if message.channel.id == introduction_channels:
+        await client.send_message(introduction_channels, embed=embed)
 
 bot.run(token)
