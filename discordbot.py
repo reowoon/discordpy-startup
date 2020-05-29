@@ -37,11 +37,11 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 # 自己紹介テンプレート固定
-embed = discord.Embed(title='自己紹介テンプレート', description='【名前】\n【年齢】\n【趣味】\n【一言】', color=0x64ffff)
 
 @client.event
 async def on_message(message):
-    if message.channel.id == introduction_channels:
+    if message.channel.id in introduction_channels:
+        embed = discord.Embed(title='自己紹介テンプレート', description='【名前】\n【年齢】\n【趣味】\n【一言】', color=0x64ffff)
         await client.send_message(introduction_channels, embed=embed)
 
 bot.run(token)
