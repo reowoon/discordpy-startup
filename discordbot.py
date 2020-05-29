@@ -34,13 +34,5 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-# 自己紹介テンプレート固定
-introduction_channels = [559228832968736809,713312999577747527,713314722274869279]
-@bot.events
-global introduction_channels
-async def on_message(message):
-  if message.channel.id in introduction_channels:
-    embed = discord.Embed(title='自己紹介テンプレート', description='【名前】\n【年齢】\n【趣味】\n【一言】', color=0x64ffff)
-    await message.channel.send(embed=embed)
-    
+
 bot.run(token)
