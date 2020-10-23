@@ -16,6 +16,6 @@ async def ping(ctx):
 
 @bot.command()
 async def rrr(ctx):
-    await ctx.send(ctx.content)
+    await ctx.send(ctx.message)
 
 bot.run(token)
