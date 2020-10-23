@@ -1,32 +1,15 @@
+import discord
 from discord.ext import commands
 import os
 import traceback
 
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(command_prefix='r?')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-ANDROMEDA_ID = 417245684656373766
-
-# ボイスチャットと聞き専の対応関係
-voice_text = {
-    672045034316759092: 539722428671328257,
-    698362136900141076: 589773641701392385,
-    712976812237651969: 715429871907504195,
-    672049440177258506: 534725550011318282,
-    698361989889654864: 704586168439799809,
-}
-
-# カオス雑談
-chaos_channel = 417245684656373768
-# ピース雑談
-piece_channel = 585739143229734913
-# 認証時につくrole
-chaos_roles_id = 712598474574528573
-piece_role_id = 712598559224102922
-# 認証のため、リアクションをつけるメッセージ（とチャンネル）
-chaos_authorize_message = 713278562983215104
-piece_authorize_message = 712638362896564305
-authorize_message_channel = 712608688543891507
+#ステータス
+@client.event
+async def on_ready(): # botが起動したときに動作する処理
+    await client.change_presence(activity=discord.Game(name="r?help|" + "個のサーバーから集計中！" , type=1))
 
 @bot.event
 async def on_command_error(ctx, error):
