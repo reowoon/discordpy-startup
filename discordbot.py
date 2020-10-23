@@ -6,8 +6,8 @@ bot = commands.Bot(command_prefix='&')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 #ステータス
-@bot.event
-async def on_ready(): # botが起動したときに動作する処理
+@bot.event()
+async def on_ready():
     activity = discord.Activity(name='&help | Pornhub',type=discord.ActivityType.streaming)
     await bot.change_presence(activity=activity)
       
