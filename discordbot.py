@@ -8,7 +8,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 #ステータス
 @bot.event
 async def on_ready(): # botが起動したときに動作する処理
-    await bot.change_presence(activity=discord.ActivityType.streaming(name="&help | Pornhub" , type=1))
+    await bot.change_presence(type=discord.ActivityType.streaming,name="&help | Pornhub"))
       
 @bot.command()
 async def ping(ctx):
