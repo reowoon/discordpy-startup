@@ -1,9 +1,8 @@
-import discord
 from discord.ext import commands
 import os
 import traceback
 
-bot = commands.Bot(command_prefix='a')
+bot = commands.Bot(command_prefix='&')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 #ステータス
@@ -11,10 +10,9 @@ token = os.environ['DISCORD_BOT_TOKEN']
 async def on_ready(): # botが起動したときに動作する処理
     await bot.change_presence(activity=discord.Game(name="&help | ロメダ最強！" , type=1))
     
-@bot.commands
-async def ranking(ctx)
-    embed = 
-    await ctx.send(embed=embed)
+@bot.command()
+async def ping(ctx):
+    await ctx.send('pong')
 
 @bot.event
 async def on_command_error(ctx, error):
