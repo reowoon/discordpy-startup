@@ -4,19 +4,13 @@ import os
 import traceback
 from scipy.stats import rankdata
 
-bot = commands.Bot(command_prefix='&')
+bot = commands.Bot(command_prefix='a')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 #ステータス
 @bot.event
 async def on_ready(): # botが起動したときに動作する処理
     await bot.change_presence(activity=discord.Game(name="&help | ロメダ最強！" , type=1))
-   
-#ランキング集計
-@bot.event
-async def on_message()
-    await msg_count += 1
-
     
 @bot.commands
 async def ranking(ctx)
