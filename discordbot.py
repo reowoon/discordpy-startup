@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import os
 import traceback
-from scipy.stats import rankdata
 
 bot = commands.Bot(command_prefix='a')
 token = os.environ['DISCORD_BOT_TOKEN']
