@@ -15,8 +15,8 @@ async def ping(ctx):
     await ctx.send('pong')
 
 @bot.command()
-async def rrr(ctx, arg1,arg2):
+async def rrr(ctx, arg1, arg2):
     channel = get_channel(arg1)
-    await ctx.channel.send(arg2)
+    await channel.send(arg2)
 
 bot.run(token)
