@@ -9,7 +9,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 #ステータス
 @bot.event
 async def on_ready():
-    activity = discord.Activity(name='&help | Pornhub',type=discord.ActivityType.streaming)
+    activity = discord.Activity(name='&help | Pornhub',activity=streaming)
     await bot.change_presence(activity=activity)
       
 @bot.command()
