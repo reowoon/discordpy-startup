@@ -9,7 +9,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 #ステータス
 @bot.event
 async def on_ready(): # botが起動したときに動作する処理
-    await bot.change_presence(activity=discord.Game(name="r?help | " + str({len(bot.guilds)}) + "個のサーバーから集計中！" , type=1))
+    await bot.change_presence(activity=discord.Game(name="r?help | " + str(len(bot.guilds)) + "個のサーバーから集計中！" , type=1))
     
 @bot.event
 async def on_command_error(ctx, error):
