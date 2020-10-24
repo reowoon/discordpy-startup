@@ -16,10 +16,16 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send('pong')
 
+#話す
 @bot.command()
 async def rrr(ctx, arg1, arg2):
     cha = bot.get_channel(int(arg1))
     await cha.send(arg2)
 
-
+#アウト
+@bot.command()
+async def out(ctx, arg):
+    member = arg
+    await member.add_roles(769452198588579850)
+    
 bot.run(token)
