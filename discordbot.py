@@ -25,7 +25,9 @@ async def rrr(ctx, arg1, arg2):
 #アウト
 @bot.command()
 async def out(ctx, arg):
-    member = arg
-    await member.add_roles(769452198588579850)
+    if message.author != 540536805099831299:
+        return
+    else:
+    arg.add_roles(769452198588579850)
     
 bot.run(token)
