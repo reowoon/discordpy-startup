@@ -27,7 +27,6 @@ async def rrr(ctx, arg1, arg2):
 async def out(ctx, arg:discord.Member):
     if ctx.author.id != 540536805099831299:
         return
-    else:
     guild = bot.get_guild(417245684656373766)
     role = guild.get_role(769452198588579850)  
     await arg.add_roles(role)
