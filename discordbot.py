@@ -29,6 +29,7 @@ async def out(ctx, arg):
         return
     else:
     role = guild.get_role(769452198588579850)  
-    await arg.add_roles(role),ctx.send(arg.mention+'が脱落！乙！')
+    await arg.add_roles(role)
+    await ctx.send(arg.mention+'が脱落！乙！')
     
 bot.run(token)
