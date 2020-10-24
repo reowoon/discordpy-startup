@@ -28,6 +28,6 @@ async def out(ctx, arg):
     if message.author != 540536805099831299:
         return
     else:
-    arg.add_roles(769452198588579850)
+    await arg.add_roles(769452198588579850),ctx.send(arg.mention+'が脱落！乙！')
     
 bot.run(token)
