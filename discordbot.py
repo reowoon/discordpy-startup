@@ -25,9 +25,10 @@ async def rrr(ctx, arg1, arg2):
 #アウト
 @bot.command()
 async def out(ctx, arg):
-    if message.author != 540536805099831299:
+    if message.author.id != 540536805099831299:
         return
     else:
-    await arg.add_roles(769452198588579850),ctx.send(arg.mention+'が脱落！乙！')
+    role = guild.get_role(769452198588579850)  
+    await arg.add_roles(role),ctx.send(arg.mention+'が脱落！乙！')
     
 bot.run(token)
