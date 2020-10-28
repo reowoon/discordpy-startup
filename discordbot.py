@@ -43,7 +43,7 @@ async def name(ctx, arg):
 # 時報
 
         
-@tasks.loop(seconds=30)
+@tasks.loop(seconds=60)
 async def loop():
     channel = bot.get_channel(417245684656373768)
     await channel.send('あ') 
