@@ -114,6 +114,11 @@ async def loop():
         embed = discord.Embed(title=hour+'時になりました'+emojis[number],description=messages[number],colour=value)
         embed.set_thumbnail(url=images[number])
         await channel.send(embed)  
+        
+@tasks.loop(seconds=5)
+async def loop():
+    channel = bot.get_channel(539731545003655170)
+    await channel.send('あ') 
     
 loop.start()
 bot.run(token)
