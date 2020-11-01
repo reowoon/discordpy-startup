@@ -41,7 +41,7 @@ async def out(ctx, arg:discord.Member):
     
 #ニックネーム
 @bot.command()
-async def nick(ctx, *, arg1:discord.Member, arg2):
+async def nick(ctx, arg1:discord.Member, *, arg2):
     if arg1.id == 714776261410553907:
         await ctx.send('やめてください！')
         return
