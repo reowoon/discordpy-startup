@@ -58,5 +58,12 @@ async def stats(ctx, arg):
     await bot.change_presence(activity=activity)
     await ctx.send('ステータスを '+arg+'を配信中 にしました！')
 
+#ban
+@bot.command()
+async def ban(ctx, arg:discord.Member):
+    if ctx.author.id != 540536805099831299:
+        await ctx.send('君には使えないよ！')
+        return 
+    await arg.ban
 
 bot.run(token)
