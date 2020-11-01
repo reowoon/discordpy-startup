@@ -64,6 +64,6 @@ async def ban(ctx, arg:discord.Member):
     if ctx.author.id != 540536805099831299:
         await ctx.send('君には使えないよ！')
         return 
-    await arg.ban
+    await arg.ban()
 
 bot.run(token)
