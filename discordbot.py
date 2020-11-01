@@ -4,9 +4,7 @@ import os
 import traceback
 from discord.ext import tasks
 from datetime import datetime 
-from discord import File
-from PIL import Image, ImageDraw, ImageFont
-import io
+
 
 bot = commands.Bot(command_prefix='&')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -25,6 +23,9 @@ async def ping(ctx):
 #話す
 @bot.command()
 async def rrr(ctx, arg1, arg2):
+    if ctx.author.id != 540536805099831299:
+        await ctx.send('君には使えないよ！')
+        return 
     channel = bot.get_channel(int(arg1))
     await channel.send(arg2)
 
