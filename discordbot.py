@@ -42,7 +42,7 @@ async def out(ctx, arg:discord.Member):
 #ニックネーム
 @bot.command()
 async def nick(ctx, arg1:discord.Member, arg2):
-    await ctx.send(arg1.name+'の名前を'+arg2+'にしました！')
+    await ctx.send('名前を'+arg2+'にしました！')
     await arg1.edit(nick=arg2)
     
 
