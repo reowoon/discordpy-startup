@@ -58,17 +58,7 @@ async def stats(ctx, arg):
     await bot.change_presence(activity=activity)
     await ctx.send('ステータスを '+arg+'を配信中 にしました！')
 
-#ban
-@bot.command()
-async def ban(ctx, members: commands.Greedy[discord.Member],
-                   delete_days: typing.Optional[int] = 0, *,
-                   reason: str):
-    if ctx.author.id != 540536805099831299:
-        await ctx.send('君には使えないよ！')
-        return 
-    for member in members:
-        await member.ban(delete_message_days=delete_days, reason=reason)
-        await ctx.send(member+'をBANしました！')
+
         
         
 bot.run(token)
