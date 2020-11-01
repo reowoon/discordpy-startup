@@ -48,8 +48,15 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
     if arg1.id == 540536805099831299:
         await ctx.send('変えられません！')
         return
-    await ctx.send(arg1.name+'の名前を'+arg2+'にしました！')
+    await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
     await arg1.edit(nick=arg2)
     
+#ステータス
+@bot.command()
+async def stats(ctx, arg):
+    activity = discord.Activity(name='&help | '+arg,type=discord.ActivityType.streaming)
+    await bot.change_presence(activity=activity)
+    await ctx.send('ステータスを '+arg+'を配信中 にしました！')
+
 
 bot.run(token)
