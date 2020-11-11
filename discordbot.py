@@ -87,7 +87,7 @@ async def on_message(message):
         await message.channel.send("こんにちは！保存したいメッセージを入力してね！")
     
         #ユーザーからのメッセージを待つ
-        wait_message = await client.wait_for("message", check=check)
+        wait_message = await bot.wait_for("message", check=check)
 
         #メッセージを打ち込まれたのを確認すると下記の文章を出力
         await message.channel.send("保存したメッセージはこちらになるよ！")
