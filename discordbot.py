@@ -69,7 +69,7 @@ async def stats(ctx, arg):
     await ctx.send('ステータスを '+arg+'を配信中 にしました！')
 
 #メッセージを取得した時に実行される
-@client.event
+@bot.event
 async def on_message(message): 
 
     #Botのメッセージは除外
