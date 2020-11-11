@@ -56,7 +56,7 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
 async def nick_b(ctx):
     channel = bot.get_channel(775983131399946241)
     await ctx.send('nickコマンドをブロックしました！')
-    await channel.send(str(ctx.author.id))
+    await ctx.send(str(ctx.author.id))
 
     
     
