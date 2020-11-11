@@ -68,7 +68,32 @@ async def stats(ctx, arg):
     await bot.change_presence(activity=activity)
     await ctx.send('ステータスを '+arg+'を配信中 にしました！')
 
+#メッセージを取得した時に実行される
+@client.event
+async def on_message(message): 
 
+    #Botのメッセージは除外
+    if message.author.bot:
+        return
+
+    #条件に当てはまるメッセージかチェックし正しい場合は返す
+    def check(msg):
+        return msg.author == message.author
+
+    #/getとチャンネル上に打ち込むとBotが反応を示す
+    if message.content.startswith("/get"):
+
+        #/getと打ち込まれたチャンネル上に下記の文章を出力
+        await message.channel.send("こんにちは！保存したいメッセージを入力してね！")
+    
+        #ユーザーからのメッセージを待つ
+        wait_message = await client.wait_for("message", check=check)
+
+        #メッセージを打ち込まれたのを確認すると下記の文章を出力
+        await message.channel.send("保存したメッセージはこちらになるよ！")
+
+        #取得したメッセージを書き込まれたチャンネルへ送信
+        await message.channel.send(wait_message.content)
         
         
 bot.run(token)
