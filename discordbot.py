@@ -39,7 +39,7 @@ async def out(ctx, arg:discord.Member):
     await arg.add_roles(role)
     await ctx.send(arg.mention+'が脱落！')
     
-#ニックネーム
+#ニックネーム変更
 @bot.command()
 async def nick(ctx, arg1:discord.Member, *, arg2):
     if arg1.id == 714776261410553907:
@@ -50,6 +50,13 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
         return
     await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
     await arg1.edit(nick=arg2)
+
+#ニックネーム変更拒否
+async def nick.b(ctx):
+    channel = bot.getchannel(775983131399946241)
+    await channel.send(ctx.author.id)
+    
+    
     
 #ステータス
 @bot.command()
