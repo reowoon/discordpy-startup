@@ -52,7 +52,7 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
     await arg1.edit(nick=arg2)
 
 #ニックネーム変更拒否
-async def nick.b(ctx):
+async def nick_b(ctx):
     channel = bot.getchannel(775983131399946241)
     await channel.send(ctx.author.id)
     
