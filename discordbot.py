@@ -50,15 +50,6 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
         return
     await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
     await arg1.edit(nick=arg2)
-
-#ニックネーム変更拒否
-@bot.command()
-async def nick_b(ctx):
-    channel = bot.get_channel(775983131399946241)
-    await ctx.send('nickコマンドをブロックしました！')
-    await channel.send(str(ctx.author.id))
-
-    
     
     
 #ステータス
@@ -67,33 +58,6 @@ async def stats(ctx, arg):
     activity = discord.Activity(name='&help | '+arg,type=discord.ActivityType.streaming)
     await bot.change_presence(activity=activity)
     await ctx.send('ステータスを '+arg+'を配信中 にしました！')
-
-#メッセージを取得した時に実行される
-@bot.event
-async def on_message(message): 
-
-    #Botのメッセージは除外
-    if message.author.bot:
-        return
-
-    #条件に当てはまるメッセージかチェックし正しい場合は返す
-    def check(msg):
-        return msg.author == message.author
-
-    #/getとチャンネル上に打ち込むとBotが反応を示す
-    if message.content.startswith("/get"):
-
-        #/getと打ち込まれたチャンネル上に下記の文章を出力
-        await message.channel.send("こんにちは！保存したいメッセージを入力してね！")
-    
-        #ユーザーからのメッセージを待つ
-        wait_message = await bot.wait_for("message", check=check)
-
-        #メッセージを打ち込まれたのを確認すると下記の文章を出力
-        await message.channel.send("保存したメッセージはこちらになるよ！")
-
-        #取得したメッセージを書き込まれたチャンネルへ送信
-        await message.channel.send(wait_message.content)
         
         
 bot.run(token)
