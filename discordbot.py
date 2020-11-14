@@ -66,7 +66,7 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
 #test
 @bot.command()
 async def test1(ctx):
-    await ctx.send(ctx.author.roles)
+    await ctx.send(str(ctx.author.roles))
 
 #変更拒否
 @bot.command()
