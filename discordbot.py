@@ -18,6 +18,12 @@ async def on_ready():
     await bot.change_presence(activity=activity)
     await channel.send('おはようございます！')
       
+#tweitter通知削除
+@bot.event
+async def on_message(m):
+    if '通知までの誤差(秒)' in m.content:
+        await m.delete
+        
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
