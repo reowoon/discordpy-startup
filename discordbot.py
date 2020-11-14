@@ -43,7 +43,7 @@ async def out(ctx, arg:discord.Member):
     
 #変更拒否
 @bot.command()
-async def nick_b(ctx):
+async def nickb(ctx):
     role = guild.get_role(777023800746573835)
     if ctx.author.roles not in '777023800746573835':
         await ctx.author.add_roles(role)
