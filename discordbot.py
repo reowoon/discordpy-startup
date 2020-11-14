@@ -78,7 +78,12 @@ async def nick_b(ctx):
     await ctx.author.add_roles(role)
     await ctx.send('改名拒否役職を与えました！')
 
-        
+@bot.event
+async def on_message(m):
+    if m.content == '&nick_b':
+        role = guild.get_role(777023800746573835)
+        await m.author.add_roles(role)
+        await m.send('改名拒否役職を与えました！')
 
 
     
