@@ -14,9 +14,7 @@ guild = bot.get_guild(417245684656373766)
 @bot.event
 async def on_ready():
     activity = discord.Activity(name='&help | Pornhub',type=discord.ActivityType.streaming)
-    channel = bot.get_channel(417245684656373768)
     await bot.change_presence(activity=activity)
-    await channel.send('おはよう！')
       
 @bot.command()
 async def ping(ctx):
