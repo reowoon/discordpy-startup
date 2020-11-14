@@ -72,7 +72,7 @@ async def nick_b(ctx):
     if  role in ctx.author.roles:
         await ctx.author.remove_roles(role)
         await ctx.send('改名拒否役職を外しました！')
-    else:
+    if  role not in ctx.author.roles:
         await ctx.author.add_roles(role)
         await ctx.send('改名拒否役職を与えました！')
         
