@@ -41,16 +41,7 @@ async def out(ctx, arg:discord.Member):
     
 
 
-#変更拒否
-@bot.command()
-async def nick_b(ctx):
-    role = guild.get_role(777023800746573835)
-    if ctx.author.roles not in role:
-        await ctx.author.add_roles(role)
-        await ctx.send('改名拒否役職を与えました！')
-    elif:
-        await ctx.author.remove_roles(role)
-        await ctx.send('改名拒否役職を外しました！')
+
     
 #ステータス
 @bot.command()
