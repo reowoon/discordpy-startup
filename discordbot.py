@@ -45,10 +45,10 @@ async def out(ctx, arg:discord.Member):
 #ニックネーム変更
 @bot.command()
 async def nick(ctx, arg1:discord.Member, *, arg2):
-    if ctx.author.roles in 777023800746573835:
+    if ctx.author.roles.id in 777023800746573835:
         await ctx.send('あなたは改名拒否をしているため変えられません！')
         return
-    if arg1.roles in 777023800746573835:
+    if arg1.roles.id in 777023800746573835:
         await ctx.send('改名拒否されているため変えられません！')
         return
     if arg1.id == 714776261410553907:
@@ -57,7 +57,7 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
     if arg1.id == 540536805099831299:
         await ctx.send('れおうーん様は変えられません！')
         return
-    if arg1.roles in 696706523560280084:
+    if arg1.roles.id in 696706523560280084:
         await ctx.send('BOTの名前は変えられません！')
         return
     await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
@@ -68,7 +68,7 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
 @bot.command()
 async def nick_b(ctx):
     role = guild.get_role(777023800746573835)
-    if ctx.author.roles in 777023800746573835:
+    if ctx.author.roles.id in 777023800746573835:
         await ctx.author.remove_roles(role)
         await ctx.send('改名拒否役職を外しました！')
     else:
