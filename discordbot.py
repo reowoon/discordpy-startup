@@ -41,26 +41,7 @@ async def out(ctx, arg:discord.Member):
     await arg.add_roles(role)
     await ctx.send(arg.mention+'が脱落！')
     
-#ニックネーム変更
-@bot.command()
-async def nick(ctx, arg1:discord.Member, *, arg2):
-    if ctx.author.roles in 777023800746573835:
-        await ctx.send('あなたは改名拒否をしているため変えられません！')
-        return
-    if arg1.roles in 777023800746573835:
-        await ctx.send('改名拒否されているため変えられません！')
-        return
-    if arg1.id == 714776261410553907:
-        await ctx.send('やめてください！')
-        return
-    if arg1.id == 540536805099831299:
-        await ctx.send('れおうーん様は変えられません！')
-        return
-    if arg1.roles in 696706523560280084:
-        await ctx.send('BOTの名前は変えられません！')
-        return
-    await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
-    await arg1.edit(nick=arg2)
+
 
 #変更拒否
 @bot.command()
