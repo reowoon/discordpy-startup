@@ -17,12 +17,6 @@ async def on_ready():
     channel = bot.get_channel(417245684656373768)
     await bot.change_presence(activity=activity)
     await channel.send('おはようございます！')
-      
-#tweitter通知削除
-@bot.event
-async def on_message(m):
-    if '通知までの誤差(秒)' in m.content:
-        await m.delete
         
 @bot.command()
 async def ping(ctx):
@@ -53,20 +47,11 @@ async def out(ctx, arg:discord.Member):
 async def nick(ctx, arg1:discord.Member, *, arg2):
     role = guild.get_role(777023800746573835)
     role1 = guild.get_role(696706523560280084)
-    if role in ctx.author.roles:
-        await ctx.send('あなたは改名拒否をしているため変えられません！')
-        return
-    if role in arg1.roles:
-        await ctx.send('改名拒否されているため変えられません！')
-        return
     if arg1.id == 714776261410553907:
         await ctx.send('やめてください！')
         return
     if arg1.id == 540536805099831299:
         await ctx.send('れおうーん様は変えられません！')
-        return
-    if role1 in arg1.roles:
-        await ctx.send('BOTの名前は変えられません！')
         return
     await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
     await arg1.edit(nick=arg2)
