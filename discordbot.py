@@ -66,7 +66,8 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
 #test
 @bot.command()
 async def test1(ctx):
-    await ctx.send(str(ctx.author.roles.id))
+    if ctx.author.roles in 701440228476584047:
+        await ctx.send('done')
 
 #変更拒否
 @bot.command()
