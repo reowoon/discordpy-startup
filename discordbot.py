@@ -5,7 +5,6 @@ import traceback
 from discord.ext import tasks
 from datetime import datetime 
 
-intent=discord.Intents.all()
 bot = commands.Bot(command_prefix='&')
 token = os.environ['DISCORD_BOT_TOKEN']
 guild = bot.get_guild(417245684656373766)
