@@ -54,14 +54,7 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
         return
     await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
     await arg1.edit(nick=arg2)
-    
-#変更拒否
-@bot.command()
-async def nick_b(ctx):
-    role = guild.get_role(777023800746573835)
-    await ctx.author.add_roles(role)
-    await ctx.send('改名拒否役職を与えました！')
-
+   
 @bot.event
 async def on_message(m):
     if m.content == '&nick_b':
