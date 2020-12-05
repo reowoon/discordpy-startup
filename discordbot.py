@@ -59,8 +59,9 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
 async def stats(ctx, arg):
     activity = discord.Activity(name='&help | '+arg,type=discord.ActivityType.streaming)
     m = ('ステータスを '+arg+'を配信中 にしました！')
+    m = m.clean_content
     await bot.change_presence(activity=activity)
-    await ctx.m.clean_content
+    await ctx.send.m
         
         
 bot.run(token)
