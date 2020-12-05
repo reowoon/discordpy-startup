@@ -187,8 +187,5 @@ async def _channel_send_join(member, voiceChannel):
     if target is not None:
         await target.send(member.mention + "さん、聞き専はこちらです！")
 
-
-if __name__ == "__main__":
-    
         
 bot.run(token)
