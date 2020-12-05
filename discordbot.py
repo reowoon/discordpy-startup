@@ -85,8 +85,6 @@ BOT_ROLE_NAME = "manaho"
 @bot.event
 async def on_ready():
     # 初期化処理などが行えるよ
-    print("On ready")
-
 
 # ボイスチャンネル内の状態が変化したときに実行される
 @bot.event
