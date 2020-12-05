@@ -48,8 +48,7 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
     if arg1.id == 540536805099831299:
         await ctx.send('れおうーん様は変えられません！')
         return
-    m = (arg1.name+' の名前を '+arg2+' にしました！'')
-    await ctx.m.clean_content
+    await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
     await arg1.edit(nick=arg2)
    
 
