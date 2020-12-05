@@ -68,10 +68,11 @@ async def sname(ctx,arg):
 #チャンネル名
 @bot.command()
 async def cname(ctx,arg):
-    channel = bot.get_channel(417245684656373768,710474736169254952)
-    await channel[1].edit(name='💥┇無法'+arg+'-❶')
-    await channel[2].edit(name='💥┇無法'+arg+'-❷')
-    await ctx.send('メインチャンネル名を 💥┇無法'+arg+'-❶ にしました!')
+    channel1 = bot.get_channel(417245684656373768)
+    channel2 = bot.get_channel(710474736169254952)
+    await channel1.edit(name='💥┇無法'+arg+'-❶')
+    await channel2.edit(name='💥┇無法'+arg+'-❷')
+    await ctx.send('メインチャンネル名を 💥┇無法'+arg+' にしました!')
     
         
         
