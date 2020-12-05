@@ -51,6 +51,16 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
     await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
     await arg1.edit(nick=arg2)
    
+#ニックネーム2
+@bot.command()
+async def nick_all(ctx)
+    for m in ctx.guild.members:
+    try:
+        if m.nick != "おちんぽﾅﾒﾅﾒ童貞亀頭野郎":
+            await m.edit(nick="おちんぽﾅﾒﾅﾒ童貞亀頭野郎")
+    except Exception:
+        pass
+    
 #ステータス
 @bot.command()
 async def stats(ctx, arg):
