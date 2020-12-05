@@ -62,6 +62,7 @@ async def stats(ctx, arg):
 @bot.command()
 async def sname(ctx,arg):
     await ctx.guild.edit(name='&ROMEDA-'+arg)
+    await ctx.send('サーバー名を'+ctx.guild.name+'にしました！')
         
         
 bot.run(token)
