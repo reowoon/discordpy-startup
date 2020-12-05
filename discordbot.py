@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 import os
-import traceback
 from discord.ext import tasks
 from datetime import datetime 
 
@@ -39,15 +38,7 @@ async def out(ctx, arg:discord.Member):
     role = guild.get_role(769452198588579850)  
     await arg.add_roles(role)
     await ctx.send(arg.mention+'が脱落！')
-    
-    
 
-@bot.event
-async def on_message(m):
-    if m.content == '&nick_b':
-        role = guild.get_role(777023800746573835)
-        await m.author.add_roles(role)
-        await m.send('改名拒否役職を与えました！')
 
 
     
