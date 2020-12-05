@@ -60,8 +60,8 @@ async def stats(ctx, arg):
         
 #鯖名
 @bot.command()
-async def servername(ctx,arg):
-    await guild.edit(name='&ROMEDA-'+arg)
+async def sname(ctx,arg):
+    await ctx.guild.edit(name='&ROMEDA-'+arg)
         
         
 bot.run(token)
