@@ -42,15 +42,14 @@ async def out(ctx, arg:discord.Member):
 #ニックネーム変更
 @bot.command()
 async def nick(ctx, arg1:discord.Member, *, arg2):
-    role = guild.get_role(777023800746573835)
-    role1 = guild.get_role(696706523560280084)
     if arg1.id == 714776261410553907:
         await ctx.send('やめてください！')
         return
     if arg1.id == 540536805099831299:
         await ctx.send('れおうーん様は変えられません！')
         return
-    await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
+    m = (arg1.name+' の名前を '+arg2+' にしました！'')
+    await ctx.send.m.clean_content
     await arg1.edit(nick=arg2)
    
 
@@ -59,8 +58,9 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
 @bot.command()
 async def stats(ctx, arg):
     activity = discord.Activity(name='&help | '+arg,type=discord.ActivityType.streaming)
+    m = ('ステータスを '+arg+'を配信中 にしました！')
     await bot.change_presence(activity=activity)
-    await ctx.send('ステータスを '+arg+'を配信中 にしました！')
+    await ctx.send.clean_content
         
         
 bot.run(token)
