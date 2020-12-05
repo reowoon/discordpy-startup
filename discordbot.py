@@ -81,11 +81,6 @@ CHANNEL_PREFIX = "👂┇聞き専-"
 BOT_ROLE_NAME = "manaho"
 
 
-# 接続できたときに実行される
-@bot.event
-async def on_ready():
-    # 初期化処理などが行えるよ
-
 # ボイスチャンネル内の状態が変化したときに実行される
 @bot.event
 async def on_voice_state_update(member, before, after):
