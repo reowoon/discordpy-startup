@@ -39,7 +39,7 @@ async def out(ctx, arg:discord.Member):
     await arg.add_roles(role)
     await ctx.send(arg.mention+'が脱落！')
 
-#ニックネーム変更
+#ニックネーム
 @bot.command()
 async def nick(ctx, arg1:discord.Member, *, arg2):
     if arg1.id == 714776261410553907:
@@ -51,16 +51,17 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
     await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
     await arg1.edit(nick=arg2)
    
-
-    
 #ステータス
 @bot.command()
 async def stats(ctx, arg):
     activity = discord.Activity(name='&help | '+arg,type=discord.ActivityType.streaming)
-    m = ('ステータスを '+arg+'を配信中 にしました！')
-    m = m.clean_content
     await bot.change_presence(activity=activity)
-    await ctx.send.m
+    await ctx.send('ステータスを '+arg+'を配信中 にしました！')
+        
+#鯖名
+@bot.command()
+async def servername(ctx,arg):
+    await guild.edit(name='&ROMEDA-'+arg)
         
         
 bot.run(token)
