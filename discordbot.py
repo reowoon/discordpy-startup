@@ -41,20 +41,7 @@ async def out(ctx, arg:discord.Member):
     await ctx.send(arg.mention+'が脱落！')
     
     
-#ニックネーム変更
-@bot.command()
-async def nick(ctx, arg1:discord.Member, *, arg2):
-    role = guild.get_role(777023800746573835)
-    role1 = guild.get_role(696706523560280084)
-    if arg1.id == 714776261410553907:
-        await ctx.send('やめてください！')
-        return
-    if arg1.id == 540536805099831299:
-        await ctx.send('れおうーん様は変えられません！')
-        return
-    await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
-    await arg1.edit(nick=arg2)
-   
+
 @bot.event
 async def on_message(m):
     if m.content == '&nick_b':
