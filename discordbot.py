@@ -64,6 +64,14 @@ async def stats(ctx, arg):
 async def sname(ctx,arg):
     await ctx.guild.edit(name='&ROMEDA-'+arg)
     await ctx.send('サーバー名を &ROMEDA-'+arg+' にしました！')
+    
+#チャンネル名
+@bot.command()
+async def cname(ctx,arg)
+    channel = bot.get_channel(417245684656373768)
+    await channel.edit(name='💥┇無法'+arg+'-❶')
+    await ctx.send('メインチャンネル名を 💥┇無法'+arg+'-❶ にしました!')
+    
         
         
 bot.run(token)
