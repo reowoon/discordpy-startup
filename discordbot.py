@@ -49,7 +49,7 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
         await ctx.send('れおうーん様は変えられません！')
         return
     m = (arg1.name+' の名前を '+arg2+' にしました！'')
-    await ctx.send.m.clean_content
+    await ctx.m.clean_content
     await arg1.edit(nick=arg2)
    
 
@@ -60,7 +60,7 @@ async def stats(ctx, arg):
     activity = discord.Activity(name='&help | '+arg,type=discord.ActivityType.streaming)
     m = ('ステータスを '+arg+'を配信中 にしました！')
     await bot.change_presence(activity=activity)
-    await ctx.clean_content.send
+    await ctx.m.clean_content
         
         
 bot.run(token)
