@@ -60,7 +60,7 @@ async def stats(ctx, arg):
     activity = discord.Activity(name='&help | '+arg,type=discord.ActivityType.streaming)
     m = ('ステータスを '+arg+'を配信中 にしました！')
     await bot.change_presence(activity=activity)
-    await ctx.send.clean_content
+    await ctx.clean_content.send
         
         
 bot.run(token)
