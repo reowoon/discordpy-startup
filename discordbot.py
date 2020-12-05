@@ -87,6 +87,8 @@ async def on_voice_state_update(member, before, after):
     # チャンネルを移動していない場合処理をしない
     if before.channel == after.channel:
         return
+    if before.channel.id == 784850441493938176:
+        return
 
     # チャンネルから退出してきた場合
     if before.channel is not None:
