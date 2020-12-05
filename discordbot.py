@@ -67,7 +67,7 @@ async def sname(ctx,arg):
     
 #チャンネル名
 @bot.command()
-async def cname(ctx,arg)
+async def cname(ctx,arg):
     channel = bot.get_channel(417245684656373768)
     await channel.edit(name='💥┇無法'+arg+'-❶')
     await ctx.send('メインチャンネル名を 💥┇無法'+arg+'-❶ にしました!')
