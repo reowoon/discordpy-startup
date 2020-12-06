@@ -85,12 +85,13 @@ BOT_ROLE_NAME = "manaho"
 @bot.event
 async def on_voice_state_update(member, before, after):
     # チャンネルを移動していない場合処理をしない
-    if after.channel.id == 784850441493938176:
+    if before.channel == after.channel:
         return
 
     # チャンネルから退出してきた場合
-    if after.channel is not None:
+    if before.channel is not None:
         # ボイスチャンネルに誰もいなくなった場合
+        if len(before.channel.members) == 0:
             # テキストチャンネルを削除する
         await _channel_delete(member, before.channel)
     else:
