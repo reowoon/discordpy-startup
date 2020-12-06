@@ -85,8 +85,6 @@ BOT_ROLE_NAME = "manaho"
 @bot.event
 async def on_voice_state_update(member, before, after):
     # チャンネルを移動していない場合処理をしない
-    if before.channel == after.channel:
-        return
     if after.channel.id == 784850441493938176:
         return
 
