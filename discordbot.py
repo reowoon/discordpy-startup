@@ -89,7 +89,7 @@ async def on_voice_state_update(member, before, after):
         return
 
     # チャンネルから退出してきた場合
-    if before.channel is None:
+    if before.channel is not None:
         # ボイスチャンネルに誰もいなくなった場合
             # テキストチャンネルを削除する
         await _channel_delete(member, before.channel)
