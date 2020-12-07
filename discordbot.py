@@ -70,9 +70,9 @@ async def sname(ctx,arg):
 async def cname(ctx,arg):
     channel1 = bot.get_channel(417245684656373768)
     channel2 = bot.get_channel(710474736169254952)
-    await channel1.edit(name='┏💥┇'+arg+'-❶')
-    await channel2.edit(name='┣💥┇'+arg+'-❷')
-    await ctx.send('メインチャンネル名を 💥┇'+arg+' にしました!')
+    await channel1.edit(name='┏'+arg+'-❶')
+    await channel2.edit(name='┣'+arg+'-❷')
+    await ctx.send('メインチャンネル名を '+arg+' にしました!')
     
 #VC
 # テキストチャンネルの先頭につける文字
