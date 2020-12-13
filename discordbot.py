@@ -56,7 +56,7 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
 #ステータス変更
 @bot.command()
 async def stats(ctx, arg):
-    arg1 = arg.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ'，'ｈａｇｅ')
+    arg1 = arg.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ','ｈａｇｅ')
     activity = discord.Activity(name='&help | '+arg1,type=discord.ActivityType.streaming)
     await bot.change_presence(activity=activity)
     await ctx.send('ステータスを '+arg1+'を配信中 にしました！')
@@ -64,7 +64,7 @@ async def stats(ctx, arg):
 #鯖名
 @bot.command()
 async def sname(ctx,arg):
-    arg1 = arg.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ'，'ｈａｇｅ')
+    arg1 = arg.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ','ｈａｇｅ')
     await ctx.guild.edit(name='&ROMEDA-'+arg1)
     await ctx.send('サーバー名を &ROMEDA-'+arg1+' にしました！')
     
@@ -73,7 +73,7 @@ async def sname(ctx,arg):
 async def cname(ctx,arg):
     channel1 = bot.get_channel(417245684656373768)
     channel2 = bot.get_channel(710474736169254952)
-    arg1 = arg.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ'，'ｈａｇｅ')
+    arg1 = arg.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ','ｈａｇｅ')
     await channel1.edit(name='┏'+arg1+'-❶')
     await channel2.edit(name='┣'+arg1+'-❷')
     await ctx.send('メインチャンネル名を '+arg1+' にしました!')
