@@ -48,15 +48,21 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
     if arg1.id == 540536805099831299:
         await ctx.send('れおうーん様は変えられません！')
         return
-    arg3 = arg2.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ','ｈａｇｅ')
+    if ctx.author.id == 275574408372944897:
+        arg3 = arg2.replace('影','禿').replace('か','は').replace('カ','ハ').replace('k','h').replace('K','H').replace('Ｋ','Ｈ').replace('ｋ','ｈ')
+        await ctx.send(arg1.name+' の名前を '+arg3+' にしました！')
+        await arg1.edit(nick=arg3)
     await ctx.send(arg1.name+' の名前を '+arg3+' にしました！')
     await arg1.edit(nick=arg3)
- 
 
 #ステータス変更
 @bot.command()
 async def stats(ctx, arg):
-    arg1 = arg.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ','ｈａｇｅ')
+    if ctx.author.id == 275574408372944897:
+        arg1 = arg.replace('影','禿').replace('か','は').replace('カ','ハ').replace('k','h').replace('K','H').replace('Ｋ','Ｈ').replace('ｋ','ｈ')
+        activity = discord.Activity(name='&help | '+arg1,type=discord.ActivityType.streaming)
+        await bot.change_presence(activity=activity)
+        await ctx.send('ステータスを '+arg1+'を配信中 にしました！')
     activity = discord.Activity(name='&help | '+arg1,type=discord.ActivityType.streaming)
     await bot.change_presence(activity=activity)
     await ctx.send('ステータスを '+arg1+'を配信中 にしました！')
@@ -64,7 +70,10 @@ async def stats(ctx, arg):
 #鯖名
 @bot.command()
 async def sname(ctx,arg):
-    arg1 = arg.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ','ｈａｇｅ')
+    if ctx.author.id == 275574408372944897:
+        arg1 = arg.replace('影','禿').replace('か','は').replace('カ','ハ').replace('k','h').replace('K','H').replace('Ｋ','Ｈ').replace('ｋ','ｈ')
+        await ctx.guild.edit(name='&ROMEDA-'+arg1)
+        await ctx.send('サーバー名を &ROMEDA-'+arg1+' にしました！')
     await ctx.guild.edit(name='&ROMEDA-'+arg1)
     await ctx.send('サーバー名を &ROMEDA-'+arg1+' にしました！')
     
@@ -73,7 +82,11 @@ async def sname(ctx,arg):
 async def cname(ctx,arg):
     channel1 = bot.get_channel(417245684656373768)
     channel2 = bot.get_channel(710474736169254952)
-    arg1 = arg.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ','ｈａｇｅ')
+    if ctx.author.id == 275574408372944897:
+        arg1 = arg.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ','ｈａｇｅ')
+        await channel1.edit(name='┏'+arg1+'-❶')
+        await channel2.edit(name='┣'+arg1+'-❷')
+        await ctx.send('メインチャンネル名を '+arg1+' にしました!')
     await channel1.edit(name='┏'+arg1+'-❶')
     await channel2.edit(name='┣'+arg1+'-❷')
     await ctx.send('メインチャンネル名を '+arg1+' にしました!')
