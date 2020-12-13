@@ -52,8 +52,8 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
         arg3 = arg2.replace('影','禿').replace('か','は').replace('カ','ハ').replace('k','h').replace('K','H').replace('Ｋ','Ｈ').replace('ｋ','ｈ')
         await ctx.send(arg1.name+' の名前を '+arg3+' にしました！')
         await arg1.edit(nick=arg3)
-    await ctx.send(arg1.name+' の名前を '+arg3+' にしました！')
-    await arg1.edit(nick=arg3)
+    await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
+    await arg1.edit(nick=arg2)
 
 #ステータス変更
 @bot.command()
@@ -63,9 +63,9 @@ async def stats(ctx, arg):
         activity = discord.Activity(name='&help | '+arg1,type=discord.ActivityType.streaming)
         await bot.change_presence(activity=activity)
         await ctx.send('ステータスを '+arg1+'を配信中 にしました！')
-    activity = discord.Activity(name='&help | '+arg1,type=discord.ActivityType.streaming)
+    activity = discord.Activity(name='&help | '+arg,type=discord.ActivityType.streaming)
     await bot.change_presence(activity=activity)
-    await ctx.send('ステータスを '+arg1+'を配信中 にしました！')
+    await ctx.send('ステータスを '+arg+'を配信中 にしました！')
         
 #鯖名
 @bot.command()
@@ -74,8 +74,8 @@ async def sname(ctx,arg):
         arg1 = arg.replace('影','禿').replace('か','は').replace('カ','ハ').replace('k','h').replace('K','H').replace('Ｋ','Ｈ').replace('ｋ','ｈ')
         await ctx.guild.edit(name='&ROMEDA-'+arg1)
         await ctx.send('サーバー名を &ROMEDA-'+arg1+' にしました！')
-    await ctx.guild.edit(name='&ROMEDA-'+arg1)
-    await ctx.send('サーバー名を &ROMEDA-'+arg1+' にしました！')
+    await ctx.guild.edit(name='&ROMEDA-'+arg)
+    await ctx.send('サーバー名を &ROMEDA-'+arg+' にしました！')
     
 #チャンネル名
 @bot.command()
@@ -87,9 +87,9 @@ async def cname(ctx,arg):
         await channel1.edit(name='┏'+arg1+'-❶')
         await channel2.edit(name='┣'+arg1+'-❷')
         await ctx.send('メインチャンネル名を '+arg1+' にしました!')
-    await channel1.edit(name='┏'+arg1+'-❶')
-    await channel2.edit(name='┣'+arg1+'-❷')
-    await ctx.send('メインチャンネル名を '+arg1+' にしました!')
+    await channel1.edit(name='┏'+arg+'-❶')
+    await channel2.edit(name='┣'+arg+'-❷')
+    await ctx.send('メインチャンネル名を '+arg+' にしました!')
     
 #VC
 # テキストチャンネルの先頭につける文字
