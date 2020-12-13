@@ -48,7 +48,7 @@ async def nick(ctx, arg1:discord.Member, *, arg2):
     if arg1.id == 540536805099831299:
         await ctx.send('れおうーん様は変えられません！')
         return
-    arg = arg.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ'，'ｈａｇｅ')
+    arg2 = arg2.replace('影','禿').replace('かげ','はげ').replace('カゲ','ハゲ').replace('kage','hage').replace('KAGE','HAGE').replace('ＫＡＧＥ','ＨＡＧＥ').replace('ｋａｇｅ'，'ｈａｇｅ')
     await ctx.send(arg1.name+' の名前を '+arg2+' にしました！')
     await arg1.edit(nick=arg2)
  
