@@ -37,7 +37,7 @@ async def out(ctx, arg:discord.Member):
         return 
     role = guild.get_role(769452198588579850)  
     await arg.add_roles(role)
-    await ctx.send(arg.mention+'が脱落！')
+    await ctx.send(arg.mention+'を出禁にしました！')
 
 
 
