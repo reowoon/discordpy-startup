@@ -58,7 +58,7 @@ async def stats(ctx, arg):
 async def cname(ctx, arg):
     if ctx.author in guild.member.premium_subscribers:
     channel = bot.get_channel(801398685828382751)
-        await channel.name = arg
+        await channel.edit(name=arg)
         await ctx.send('固定チャンネル名を'+arg+'にしました！')
     else:
         await ctx.send('君には使えないよ！')
