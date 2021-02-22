@@ -56,10 +56,25 @@ async def stats(ctx, arg):
 #上級VC変更
 @bot.command()
 @commands.has_role('上級ロメダ民')
-async def cname(ctx, arg):
+async def lcname(ctx, arg):
     channel = bot.get_channel(801398685828382751)
     await channel.edit(name='📍'+arg)
     await ctx.send('固定チャンネル名を📍'+arg+'にしました！')
 
-        
+#鯖名変更
+@bot.command()
+@commands.has_role('上級ロメダ民')
+async def sname(ctx, arg):
+    await guild.edit(name='&ROMEDA-'+arg)
+    await ctx.send('サーバー名を&ROMEDA-'+arg+'にしました！')
+
+#チャンネル名変更
+@bot.command()
+@commands.has_role('上級ロメダ民')
+async def mcname(ctx, arg):
+    channel = bot.get_channel(417245684656373768)
+    await channel.edit(name='🔥メイン雑談-'+arg)
+    await ctx.send('メインチャンネル名を🔥メイン雑談-'+arg+'にしました！')
+
+
 bot.run(token)
