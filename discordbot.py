@@ -65,6 +65,7 @@ async def lcname(ctx, arg):
 @bot.command()
 @commands.has_role('上級ロメダ民')
 async def sname(ctx, arg):
+    guild = guild
     await guild.edit(name='&ROMEDA-'+arg)
     await ctx.send('サーバー名を&ROMEDA-'+arg+'にしました！')
 
