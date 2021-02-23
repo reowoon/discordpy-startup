@@ -57,6 +57,7 @@ async def stats(ctx, arg):
 @bot.command()
 @commands.has_role('上級ロメダ民')
 async def lcname(ctx, arg):
+    arg = arg.replace('影','禿').replace('か','は').replace('カ','ハ').replace('k','h').replace('K','H').replace('Ｋ','Ｈ').replace('ｋ','ｈ')
     channel = bot.get_channel(801398685828382751)
     await channel.edit(name='📍'+arg)
     await ctx.send('固定チャンネル名を📍'+arg+'にしました！')
@@ -73,6 +74,7 @@ async def sname(ctx, arg):
 @bot.command()
 @commands.has_role('上級ロメダ民')
 async def mcname(ctx, arg):
+    arg = arg.replace('影','禿').replace('か','は').replace('カ','ハ').replace('k','h').replace('K','H').replace('Ｋ','Ｈ').replace('ｋ','ｈ')
     channel = bot.get_channel(417245684656373768)
     await channel.edit(name='🔥メイン雑談-'+arg)
     await ctx.send('メインチャンネル名を🔥メイン雑談-'+arg+'にしました！')
