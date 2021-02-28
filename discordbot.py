@@ -20,7 +20,7 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send('pong')
 
-#話す
+#話すう
 @bot.command()
 async def rrr(ctx, arg1, arg2):
     if ctx.author.id != 540536805099831299:
