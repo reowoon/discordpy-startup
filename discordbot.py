@@ -85,14 +85,6 @@ async def nick(ctx, arg1:discord.Member, arg2):
     if arg1.id == 714776261410553907:
         await ctx.send('やめてください！')
         return
-    role1 = guild.get_role(665211531822235679)
-    if role1 in arg1.roles:
-        await ctx.send('上級ロメダ民は変更できません！')
-        return
-    role2 = guild.get_role(805347076858576938)
-    if role2 in arg1.roles:
-        await ctx.send('名誉ロメダ民は変更できません！')
-        return
     arg = arg1.name + arg2
     await arg1.edit(nick=arg)
 
