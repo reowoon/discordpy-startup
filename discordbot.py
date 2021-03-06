@@ -79,5 +79,12 @@ async def mcname(ctx, arg):
     await channel.edit(name='🔥メイン雑談-'+arg)
     await ctx.send('メインチャンネル名を🔥メイン雑談-'+arg+'にしました！')
 
+#ニックネーム変更
+@bot.command()
+async def nick(ctx, arg1:discord.Member, arg2):
+    arg = arg1.name + arg2
+    await arg1.edit(name=arg)
+    await ctx.send(arg1+'の名前を'+arg+'にしました！')
+    
 
 bot.run(token)
