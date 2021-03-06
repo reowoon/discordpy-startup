@@ -83,7 +83,7 @@ async def mcname(ctx, arg):
 @bot.command()
 async def nick(ctx, arg1:discord.Member, arg2):
     arg = arg1.name + arg2
-    await arg1.edit(name=arg)
+    await arg1.edit(nick=arg)
     await ctx.send(arg1+'の名前を'+arg+'にしました！')
     
 
