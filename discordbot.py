@@ -83,7 +83,7 @@ async def mcname(ctx, arg):
 @bot.command()
 async def nick(ctx, arg1:discord.Member, arg2):
     if arg1.id == 714776261410553907:
-        await ctx.send(やめてください！)
+        await ctx.send('やめてください！')
         return
     arg = arg1.name + arg2
     await arg1.edit(nick=arg)
