@@ -81,6 +81,7 @@ async def mcname(ctx, arg):
 
 #ニックネーム変更
 @bot.command()
+@commands.has_role('上級ロメダ民')
 async def nick(ctx, arg1:discord.Member, arg2):
     if arg1.id == 714776261410553907:
         await ctx.send('やめてください！')
