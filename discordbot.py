@@ -85,6 +85,9 @@ async def nick(ctx, arg1:discord.Member, arg2):
     if arg1.id == 714776261410553907:
         await ctx.send('やめてください！')
         return
+    if arg1 in ctx.guild.premiun_subscribers:
+        await ctx.send('上級ロメダ民は変更できません！')
+        return
     arg = arg1.name + arg2
     await arg1.edit(nick=arg)
 
