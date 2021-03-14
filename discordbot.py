@@ -70,14 +70,6 @@ async def sname(ctx, arg):
     await guild.edit(name='&ROMEDA-'+arg)
     await ctx.send('サーバー名を&ROMEDA-'+arg+'にしました！')
 
-#チャンネル名変更
-@bot.command()
-@commands.has_role('上級ロメダ民')
-async def mcname(ctx, arg):
-    arg = arg.replace('影','禿').replace('か','は').replace('カ','ハ').replace('k','h').replace('K','H').replace('Ｋ','Ｈ').replace('ｋ','ｈ')
-    channel = bot.get_channel(417245684656373768)
-    await channel.edit(name='🔥メイン雑談-'+arg)
-    await ctx.send('メインチャンネル名を🔥メイン雑談-'+arg+'にしました！')
 
 #ニックネーム変更
 @bot.command()
