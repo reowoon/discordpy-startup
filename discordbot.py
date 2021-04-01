@@ -35,7 +35,7 @@ async def out(ctx, arg:discord.Member):
     if ctx.author.id != 540536805099831299:
         await ctx.send('君には使えないよ！')
         return 
-    role = guild.get_role(769452198588579850)  
+    role = guild.get_role(714777128079720478)  
     await arg.add_roles(role)
     await ctx.send(arg.mention+'を出禁にしました！')
 
