@@ -55,7 +55,7 @@ async def stats(ctx, arg):
         
 #上級VC変更
 @bot.command()
-@commands.has_role('上級ロメダ民')
+@commands.has_role('⚜️上級ロメダ民')
 async def lcname(ctx, arg):
     arg = arg.replace('影','禿').replace('か','は').replace('カ','ハ').replace('k','h').replace('K','H').replace('Ｋ','Ｈ').replace('ｋ','ｈ')
     channel = bot.get_channel(801398685828382751)
@@ -64,7 +64,7 @@ async def lcname(ctx, arg):
 
 #鯖名変更
 @bot.command()
-@commands.has_role('上級ロメダ民')
+@commands.has_role('⚜️上級ロメダ民')
 async def sname(ctx, arg):
     guild = guild
     await guild.edit(name='&ROMEDA-'+arg)
@@ -73,7 +73,7 @@ async def sname(ctx, arg):
 
 #ニックネーム変更
 @bot.command()
-@commands.has_role('上級ロメダ民')
+@commands.has_role('⚜️上級ロメダ民')
 async def nick(ctx, arg1:discord.Member, arg2):
     if arg1.id == 714776261410553907:
         await ctx.send('やめてください！')
